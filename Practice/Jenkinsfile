@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'javac -encoding UTF-8 -cp lib/junit-platform-console-standalone-1.7.1.jar -d classes Practice/src/*.java'
+                bat 'javac -encoding UTF-8 -cp Practice/lib/junit-platform-console-standalone-1.7.1.jar -d classes Practice/src/*.java'
             }
         }
         stage('Test') {
             steps {
-                bat 'java -cp classes:lib/junit-platform-console-standalone-1.7.1.jar org.junit.platform.console.ConsoleLauncher --scan-classpath'
+                bat 'java -cp classes:Practice/lib/junit-platform-console-standalone-1.7.1.jar org.junit.platform.console.ConsoleLauncher --scan-classpath'
             }
         }
         stage('Performance Test') {
