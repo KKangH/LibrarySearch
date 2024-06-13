@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'javac -encoding UTF-8 -cp lib/junit-platform-console-standalone-1.7.1.jar -d classes src/*.java'
+                bat 'javac -encoding UTF-8 -cp lib/junit-platform-console-standalone-1.7.1.jar -d classes Practice/src/*.java'
             }
         }
         stage('Test') {
