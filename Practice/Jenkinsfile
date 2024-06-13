@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'java -cp classes:Practice/lib/junit-platform-console-standalone-1.7.1.jar org.junit.platform.console.ConsoleLauncher --scan-classpath'
+                bat 'java -cp Practice/lib/junit-platform-console-standalone-1.7.1.jar org.junit.platform.console.ConsoleLauncher --scan-classpath'
             }
         }
         stage('Performance Test') {
