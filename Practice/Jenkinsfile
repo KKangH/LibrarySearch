@@ -19,10 +19,11 @@ pipeline {
         }
 
         stage('Performance Test') {
-            steps {
-                bat 'java -cp PerformanceTest > performance_results.txt'
-            }
+                steps {
+                    bat 'java -cp classes;Practice/lib/junit-platform-console-standalone-1.7.1.jar PerformanceTest > performance_results.txt'
+                }
         }
+
 
     }
     post {
